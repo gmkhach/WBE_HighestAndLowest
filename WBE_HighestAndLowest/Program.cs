@@ -20,12 +20,11 @@ namespace WBE_HighestAndLowest
                 try
                 {
                     Console.Write("Enter numbers separated by commas\n\n>>> ");
-                    string inputString = Console.ReadLine();
-                    string[] stringArray = inputString.Split(',');
-                    int[] intArray = new int[stringArray.Length];
-                    for (int i = 0; i < stringArray.Length; i++)
+                    string[] input = Console.ReadLine().Split(',');
+                    int[] intArray = new int[input.Length];
+                    for (int i = 0; i < input.Length; i++)
                     {
-                        intArray[i] = Convert.ToInt32(stringArray[i]);
+                        intArray[i] = Convert.ToInt32(input[i]);
                     }
                     Console.WriteLine($"\nlowest: {FindHighestAndLowest(intArray)[0]}\nhighest: {FindHighestAndLowest(intArray)[1]}");
                 }
